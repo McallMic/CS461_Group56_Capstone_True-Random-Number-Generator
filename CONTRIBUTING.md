@@ -1,6 +1,6 @@
 # Notes
 
-Most sections below are subject to change in the near future as the team does more research into what type of TRNG we want to build and what its development will look like, .
+Most sections below are subject to change in the near future as the team does more research into what type of TRNG we want to build and what its development will look like.
 
 # Contributing Guide
 
