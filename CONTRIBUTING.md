@@ -32,7 +32,7 @@ Define required test types, how to run tests, expected coverage thresholds, and 
 
 ## Definition of Done
 
-List the checks a change must pass before it merges (tests, review, docs updated, lint and security checks), each with the CI job, hook, or test that enforces it. For a gate not built yet, name the sprint it lands in and its owner.
+Our Definition of Done should apply to each change we merge. A change is done when it meets its requirements, passes relevant tests, has been reviewed and approved by another teammate(s), includes any needed documentation updates, and passes automated checks for common coding mistakes or potential security problems. We plan to build a test suite, where we’ll identify the sprint and owner for each check that isn’t set up yet. As we continue to research the generator, we can add or change specific testing requirements as needed!
 
 ## Contribution Norm
 
