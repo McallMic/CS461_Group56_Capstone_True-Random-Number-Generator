@@ -36,7 +36,7 @@ Define required test types, how to run tests, expected coverage thresholds, and 
 
 ## Definition of Done
 
-List the checks a change must pass before it merges (tests, review, docs updated, lint and security checks), each with the CI job, hook, or test that enforces it. For a gate not built yet, name the sprint it lands in and its owner.
+Our Definition of Done should apply to each change we merge. A change is done when it meets its requirements, passes relevant tests, has been reviewed and approved by another teammate(s), includes any needed documentation updates, and passes automated checks for common coding mistakes or potential security problems. We plan to build a test suite, where we’ll identify the sprint and owner for each check that isn’t set up yet. As we continue to research the generator, we can add or change specific testing requirements as needed!
 
 ## Contribution Norm
 
@@ -48,7 +48,9 @@ An owned piece of work is something created by the owner, whether that be a piec
 
 For a piece of work in a document to be accepted, at least one other group member reviewed the work done and informed the owner that their work was satisfactory, either through a message in the shared Discord server or as a comment on the section they reviewed.
 
-For a piece of work regarding code to be accepted, a pull request was made by the owner, then accepted by a different group member.
+For a piece of work regarding code to be accepted, a pull request was made by the owner and then accepted by a different group member.
+
+In terms of the timeframe for reviewing other group members' contributions, the team will discuss and add this once we come to an agreement on the acceptable range of time to complete reviews.
 
 ## Pull Requests & Reviews
 
