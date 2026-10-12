@@ -1,3 +1,7 @@
+# Notes
+
+Most sections below are subject to change in the near future as the team does more research into what type of TRNG we want to build and what its development will look like, .
+
 # Contributing Guide
 
 How to set up, code, test, review, and release so contributions meet our Definition of Done.
@@ -36,7 +40,15 @@ List the checks a change must pass before it merges (tests, review, docs updated
 
 ## Contribution Norm
 
-State the floor (every contributor lands at least one piece of accepted work per sprint), where each kind of work lives (the repository, the issue tracker, the partner's system), and what accepted means for each.
+The floor of work per sprint is that all group members contribute at least one piece of work they own to every sprint.
+
+For the time being, all research and writing contributions will live in the group's shared Google Drive folder, while any code contributions will live in the group's repository.
+
+An owned piece of work is something created by the owner, whether that be a piece of code, a section of a document, a new document they started, etc.
+
+For a piece of work in a document to be accepted, at least one other group member reviewed the work done and informed the owner that their work was satisfactory, either through a message in the shared Discord server or as a comment on the section they reviewed.
+
+For a piece of work regarding code to be accepted, a pull request was made by the owner, then accepted by a different group member.
 
 ## Pull Requests & Reviews
 
