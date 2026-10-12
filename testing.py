@@ -20,8 +20,6 @@ plt.xlim([0, 500])
 plt.ylim([0, 500])
 plt.scatter(x,y)
 plt.show()
-print(x)
-print(y)
 
 #This is currently assuming the list of generated numbers is even, and the range of the generated numbers is between 0 and 500.
 
