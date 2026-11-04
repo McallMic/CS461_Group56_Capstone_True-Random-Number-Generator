@@ -5,7 +5,7 @@
 ## Problem Statement
 
 Project 56: True Random Number Generator:
-We aims to deliver a usable random-number generator that users can download, install, and test. The team’s initial use is to evaluate whether the generator’s output demonstrates the value of the TRNG approach. The intended audience beyond our team is not yet finalized yet.
+We aim to deliver a usable random-number generator that users can download, install, and test. The team’s initial use is to evaluate whether the generator’s output demonstrates the value of the TRNG approach. The intended audience beyond our team is not yet finalized.
 
 The mouse-movement noise capture is our preliminary prototype, which we plan to replace with a different noise source. The source, digitization method, output format, and measurable success criteria will remain open.
 
@@ -40,7 +40,7 @@ The mouse-movement noise capture is our preliminary prototype, which we plan to 
 ## Constraints
 
 - The mouse-movement recorder is an exploratory prototype. The team plans to replace it with a different noise source.
-- The team has not yet selected the final noise source, digitization method, or final circuit and hardware design.
+- The team has not yet selected the final noise source, digitization method, or circuit and hardware design.
 - People outside the team should be able to download, install, and use the product. It will be available through GitHub.
 - The team has not yet agreed on numeric success thresholds and plans to finalize them by the end of the week.
 
