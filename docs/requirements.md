@@ -40,8 +40,8 @@ The mouse-movement noise capture is our preliminary prototype, which we plan to 
 ## Constraints
 
 - The mouse-movement recorder is an exploratory prototype. The team plans to replace it with a different noise source.
-- The team has not yet selected the noise source, digitization method, or final circuit and hardware design.
-- People outside the team must be able to download, install, and use the product. It will be distributed through GitHub.
+- The team has not yet selected the final noise source, digitization method, or final circuit and hardware design.
+- People outside the team should be able to download, install, and use the product. It will be available through GitHub.
 - The team has not yet agreed on numeric success thresholds and plans to finalize them by the end of the week.
 
 ## Success Metrics
