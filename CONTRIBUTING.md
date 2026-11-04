@@ -6,33 +6,42 @@ Most sections below are subject to change in the near future as the team does mo
 
 How to set up, code, test, review, and release so contributions meet our Definition of Done.
 
+This is unclear at this time; will be updated following further discussion with the group and project partner.
+
 ## Code of Conduct
 
-Reference the project/community behavior expectations and reporting process.
+See the Team Charter for the general guidelines of the Code of Conduct: [Team Charter](https://docs.google.com/document/d/1lhDVcDhi6ujgrWubperdLsykDccozzaA1HQHPyKgDjU/edit?usp=sharing)
 
 ## Getting Started
 
-List prerequisites, setup steps, environment variables/secrets handling, and how to run the app locally.
+As the TRNG is still in development, this is subject to change once more components are added. Currently, the user only needs to clone the repository to get started. There will likely be a final python file that they can eventually run to utilize the TRNG.
 
 ## Branching & Workflow
 
-Describe the workflow (e.g., trunk-based or GitFlow), default branch, branch naming, and when to rebase vs. merge.
+To name a branch, include the main focus of the adjustments being made (like the main file up for editing) in the title. The default branch is main, and a pull request should happen before any merges to main.
 
 ## Issues & Planning
 
 Explain how to file issues, required templates/labels, estimation, and triage/assignment practices.
 
+To file an issue, assign it a unique ID value (like #82), which makes it simple for future referencing. 
+
 ## Commit Messages
 
-State the convention (e.g., Conventional Commits), include examples, and how to reference issues.
+Convential Commits: Commit messages should briefly summarize any changes made and where they occurred, with the following as an example:
+"new tests for uniqueness added to test_suite.py".
+
+To reference issues, use the unique ID assigned to each individual one to locate it.
 
 ## Code Style, Linting & Formatting
 
 Name the formatter/linter, config file locations, and the exact commands to check/fix locally.
 
+This is unclear at this time; will be updated following further discussion with the group and project partner.
+
 ## Testing
 
-Define required test types, how to run tests, expected coverage thresholds, and when new/updated tests are mandatory.
+Use entropy.py (or other file if this changes during development) to check entropy levels of TRNG values. Use the testing suite in the unit test framework file to check for errors in the code, with more tests added to this file to correspond with any new code added to the project.
 
 ## Definition of Done
 
@@ -56,17 +65,25 @@ In terms of the timeframe for reviewing other group members' contributions, the 
 
 Outline PR requirements (template, checklist, size limits), reviewer expectations, approval rules, and required status checks.
 
+A pull request title should summarize what changes will be made to the main branch of code. Additionally, there aren't any size limits currently, unless it will majorly conflict with what already exists. In that case, requests should occur frequently to decrease the number of changes per merge. Reviewers should always be a different person than the one initializing the request, and they must read through the changes to ensure that they don't appear to create any major complications to the project. Run code through the test suite as needed.
+
 ## CI/CD
 
 Link to pipeline definitions, list mandatory jobs, how to view logs/re-run jobs, and what must pass before merge/release.
+
+Currently, the CI is in development, as we are still determining the exact structure we want to use for the TRNG, and depending on our final decision, the CI could differ greatly. After we have built it, this will update to include the parts listed in the previous paragraph.
 
 ## Security & Secrets
 
 State how to report vulnerabilities, prohibited patterns (hard-coded secrets), dependency update policy, and scanning tools.
 
+This is unclear at this time; will be updated following further discussion with the group and project partner.
+
 ## Documentation Expectations
 
 Specify what must be updated (README, docs/, API refs, CHANGELOG) and docstring/comment standards.
+
+As the TRNG develops further, any documents with placeholders should be changed (ex: CONTRIBUTING.md, README.md, etc.). There should be some level of commenting/docstrings, with enough detail for others to understand what the code does.
 
 ## Release Process
 
@@ -74,4 +91,4 @@ Describe versioning scheme, tagging, changelog generation, packaging/publishing 
 
 ## Support & Contact
 
-Provide maintainer contact channel, expected response windows, and where to ask questions.
+Any questions posed by group members should be asked in the group's Discord server in the appropriate channel. If further communication is necessary with either the project partner or the TA, use school email. Responses should occur within the next few business days for group members.
