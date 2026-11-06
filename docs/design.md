@@ -1,10 +1,10 @@
 # Design
 
 ## Overview
-TRNG for <partner> (requirements: docs/requirements.md): a noise source, conversion of the noise source to raw bits, raw bits used to create 
+TRNG for <partner> [requirements.md](/docs/requirements.md): a noise source, conversion of the noise source to raw bits, raw bits used to create 
 
 ## Architecture
-! [C4 context diagram] (./Basic context diagram for TRNG.pdf)
+![C4 context diagram](<../Basic context diagram for TRNG.pdf>)
 - Will update once full TRNG is finalized
 
 ## Interfaces
