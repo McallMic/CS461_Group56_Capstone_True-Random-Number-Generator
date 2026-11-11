@@ -37,9 +37,6 @@ class EntropyResult:
         return "EntropyResult(" + str(self.as_dict()) + ")"
 
 
-def check_input(samples, bits_per_sample):
-# TO-DO: input validation 
-
 def estimate_min_entropy(samples, bits_per_sample):
     # samples = check_input(samples, bits_per_sample) // Uncomment after finishing check_input
     n = len(samples)
