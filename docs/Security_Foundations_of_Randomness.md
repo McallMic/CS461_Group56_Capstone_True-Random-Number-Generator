@@ -1,0 +1,4 @@
+###Security Foundations of Randomness
+
+Why Randomness Is Critical to Cybersecurity:
+Randomness is an essential part of security systems, as they rely on secret values and protocol messages that attackers aren't able to predict. A true random number generator (TRNG) draws entropy also known as measurable uncertainty from a physical source. In many systems, this entropy seeds a deterministic random bit generator (DRBG), which produces these random bits used by all security protocols. The TRNG therefore provides the underlying uncertainty, while the DRBG produces usable output. If either the entropy source or the generation process is weak, attackers may be able to predict or reproduce security values, weakening a system even when it uses strong cryptographic algorithms (Eastlake et al., 2005; National Institute of Standards and Technology [NIST], 2018, 2025). 
