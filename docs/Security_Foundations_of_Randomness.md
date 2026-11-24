@@ -17,20 +17,20 @@ Secure communications are exchanges of information protected against eavesdroppi
 
 
 ## References:
-[1] Eastlake, D., Schiller, J., & Crocker, S. (2005). Randomness requirements for security (RFC 4086). Internet Engineering Task Force. https://www.rfc-editor.org/rfc/rfc4086
-[2] Turan, M. S., Barker, E., Kelsey, J., McKay, K., Baish, M., & Boyle, M. (2018). Recommendation for the entropy sources used for random bit generation (NIST Special Publication 800-90B). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-90B
-[3] Barker, E., Kelsey, J., McKay, K., Roginsky, A., & Sönmez Turan, M. (2025). Recommendation for random bit generator (RBG) constructions (NIST Special Publication 800-90C). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-90C
-[4] Barker, E., Roginsky, A., & Davis, R. (2020). Recommendation for cryptographic key generation (NIST Special Publication 800-133 Rev. 2). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-133r2
-[5] Dougherty, C. R. (2008, June 3). Debian and Ubuntu OpenSSL packages contain a predictable random number generator (Vulnerability Note VU#925211). CERT Coordination Center. https://www.kb.cert.org/vuls/id/925211/ 
-[6] Yilek, S., Rescorla, E., Shacham, H., Enright, B., & Savage, S. (2009). When private keys are public: Results from the 2008 Debian OpenSSL vulnerability. In Proceedings of the 9th ACM SIGCOMM Conference on Internet Measurement (pp. 15–27). Association for Computing Machinery. https://doi.org/10.1145/1644893.1644896
-[7] Apple. (n.d.). Automatically fill in strong passwords on iPhone. Apple Support. https://support.apple.com/guide/iphone/iphf9219d8c9/ios
-[8] Coursera Staff. (2025, October 21). What is authentication? Coursera. https://www.coursera.org/articles/authentication 
-[9] Heninger, N., Durumeric, Z., Wustrow, E., & Halderman, J. A. (2012). Mining your Ps and Qs: Detection of widespread weak keys in network devices. In Proceedings of the 21st USENIX Security Symposium (pp. 205–220). USENIX Association. https://www.usenix.org/conference/usenixsecurity12/technical-sessions/presentation/heninger
-[10] Breitner, J., & Heninger, N. (2019). Biased nonce sense: Lattice attacks against weak ECDSA signatures in cryptocurrencies. In Financial Cryptography and Data Security (pp. 3–20). Springer. https://doi.org/10.1007/978-3-030-32101-7_1
-[11] Pornin, T. (2013). Deterministic usage of the digital signature algorithm (DSA) and elliptic curve digital signature algorithm (ECDSA) (RFC 6979). Internet Engineering Task Force. https://www.rfc-editor.org/rfc/rfc6979
-[12] BlackBerry. (n.d.). Secure communications. https://www.blackberry.com/en/secure-communications/insights/glossary/secure-communications
-[13] Rescorla, E. (2018). The Transport Layer Security (TLS) protocol version 1.3 (RFC 8446). Internet Engineering Task Force. https://www.rfc-editor.org/rfc/rfc8446
-[14] Corrigan-Gibbs, H., Mu, W., Boneh, D., & Ford, B. (2013). Ensuring high-quality randomness in cryptographic key generation. In Proceedings of the 2013 ACM SIGSAC Conference on Computer & Communications Security (pp. 685–696). Association for Computing Machinery. https://doi.org/10.1145/2508859.2516680
+- [1] Eastlake, D., Schiller, J., & Crocker, S. (2005). Randomness requirements for security (RFC 4086). Internet Engineering Task Force. https://www.rfc-editor.org/rfc/rfc4086
+- [2] Turan, M. S., Barker, E., Kelsey, J., McKay, K., Baish, M., & Boyle, M. (2018). Recommendation for the entropy sources used for random bit generation (NIST Special Publication 800-90B). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-90B
+- [3] Barker, E., Kelsey, J., McKay, K., Roginsky, A., & Sönmez Turan, M. (2025). Recommendation for random bit generator (RBG) constructions (NIST Special Publication 800-90C). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-90C
+- [4] Barker, E., Roginsky, A., & Davis, R. (2020). Recommendation for cryptographic key generation (NIST Special Publication 800-133 Rev. 2). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-133r2
+- [5] Dougherty, C. R. (2008, June 3). Debian and Ubuntu OpenSSL packages contain a predictable random number generator (Vulnerability Note VU#925211). CERT Coordination Center. https://www.kb.cert.org/vuls/id/925211/ 
+- [6] Yilek, S., Rescorla, E., Shacham, H., Enright, B., & Savage, S. (2009). When private keys are public: Results from the 2008 Debian OpenSSL vulnerability. In Proceedings of the 9th ACM SIGCOMM Conference on Internet Measurement (pp. 15–27). Association for Computing Machinery. https://doi.org/10.1145/1644893.1644896
+- [7] Apple. (n.d.). Automatically fill in strong passwords on iPhone. Apple Support. https://support.apple.com/guide/iphone/iphf9219d8c9/ios
+- [8] Coursera Staff. (2025, October 21). What is authentication? Coursera. https://www.coursera.org/articles/authentication 
+- [9] Heninger, N., Durumeric, Z., Wustrow, E., & Halderman, J. A. (2012). Mining your Ps and Qs: Detection of widespread weak keys in network devices. In Proceedings of the 21st USENIX Security Symposium (pp. 205–220). USENIX Association. https://www.usenix.org/conference/usenixsecurity12/technical-sessions/presentation/heninger
+- [10] Breitner, J., & Heninger, N. (2019). Biased nonce sense: Lattice attacks against weak ECDSA signatures in cryptocurrencies. In Financial Cryptography and Data Security (pp. 3–20). Springer. https://doi.org/10.1007/978-3-030-32101-7_1
+- [11] Pornin, T. (2013). Deterministic usage of the digital signature algorithm (DSA) and elliptic curve digital signature algorithm (ECDSA) (RFC 6979). Internet Engineering Task Force. https://www.rfc-editor.org/rfc/rfc6979
+- [12] BlackBerry. (n.d.). Secure communications. https://www.blackberry.com/en/secure-communications/insights/glossary/secure-communications
+- [13] Rescorla, E. (2018). The Transport Layer Security (TLS) protocol version 1.3 (RFC 8446). Internet Engineering Task Force. https://www.rfc-editor.org/rfc/rfc8446
+- [14] Corrigan-Gibbs, H., Mu, W., Boneh, D., & Ford, B. (2013). Ensuring high-quality randomness in cryptographic key generation. In Proceedings of the 2013 ACM SIGSAC Conference on Computer & Communications Security (pp. 685–696). Association for Computing Machinery. https://doi.org/10.1145/2508859.2516680
 
 
 
