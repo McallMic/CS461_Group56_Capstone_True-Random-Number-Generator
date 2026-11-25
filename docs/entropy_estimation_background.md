@@ -2,7 +2,7 @@
 
 ## Introduction
 
-True Random Number Generators (TRNGs) operate by converting unpredictable physical processes, known as noise sources, into sequences of random bits. In the context of TRNG validation, the important metric is not whether the output appears random, but rather the actual amount of unpredictability (entropy) present. While statistical suites like NIST SP 800-22 or Dieharder can identify blatant failures, they are insufficient for proving entropy, as deterministic generators can also pass these tests [1], [2], [3]. This document provides the necessary background to quantify entropy, following the framework established in NIST SP 800-90B. Under this standard, an entropy source is defined as consisting of three primary elements: a noise source, health tests, and an optional conditioning component [3].
+True Random Number Generators (TRNGs) operate by converting unpredictable physical processes, known as noise sources, into sequences of random bits. In the context of TRNG validation, the important metric is not whether the output appears random, but rather the actual amount of unpredictability (entropy) present. While statistical suites like NIST SP 800-22 or Dieharder can identify blatant failures, they are insufficient for proving entropy, as deterministic generators can also pass these tests [1], [2], [3]. This document provides the necessary background to quantify entropy, following the framework established in NIST SP 800-90B. Under this standard, an entropy source consists of three primary elements: a noise source, health tests, and an optional conditioning component [3].
 
 ---
 
@@ -46,7 +46,7 @@ Rather than producing a single random variable, a noise source yields a continuo
 
 The noise source is the part of the TRNG where the nondeterminism comes from. It usually has two parts [3]:
 
-- **An analog noise process.** Examples include thermal noise in a resistor, shot noise, timing jitter in free-running ring oscillators, metastability in latches, and quantum effects such as photon arrival times or beam-splitter paths .
+- **An analog noise process.** Examples include thermal noise in a resistor, shot noise, timing jitter in free-running ring oscillators, metastability in latches, and quantum effects such as photon arrival times or beam-splitter paths.
 - **A digitization step.** This turns the analog behavior into discrete *raw samples*. For example: sampling a high-frequency jittery source with a slower reference clock or employing a comparator to measure voltage fluctuations relative to a threshold.
 
 SP 800-90B distinguishes **physical** noise sources, which use dedicated hardware, from **non-physical** ones, which use system events such as interrupt timing or disk seek times [3].
@@ -76,7 +76,7 @@ SP 800-90B gives a procedure for estimating the min-entropy per sample of a nois
 
 ### 3.1 Data collection
 
-The data collection must fulfill the following conditions:
+The data collection must meet the following requirements:
 
 - **Sequential data:** at least 1,000,000 consecutive raw samples from one run of the noise source.
 - **Restart data:** 1,000 restarts of the source, with 1,000 samples recorded after each restart, arranged as a $1000 \times 1000$ matrix [3].
@@ -86,14 +86,14 @@ The data collection must fulfill the following conditions:
 
 An evaluation must be made for whether the data can be treated as IID.
 
-If a source's data is claimed as IID, it should be checked via **permutation tests**. A set of test statistics (excursion, runs, number of increases/decreases, covariance, compression ratio, and others) is computed on the original data and on 10,000 random shuffles of it. If the data really is IID, shuffling should not change the statistics in any systematic way. Therefore, any original statistic that holds an extreme rank relative to the shuffled distributions is evidence against the data's IID claim [3].
-Additional investigation is performed via Chi-square tests for independence, along with a longest-repeated-substring test [3].
+If a source's data is claimed as IID, it should be checked via **permutation tests**. A set of test statistics (excursion, runs, number of increases/decreases, covariance, compression ratio, and others) is computed for the original data and for the 10,000 shuffled versions. If the data really is IID, shuffling should not change the statistics in any systematic way. Therefore, any original statistic that holds an extreme rank relative to the shuffled distributions is evidence against the data's IID claim [3].
+Additional investigation is performed via chi-square tests for independence, along with a longest-repeated-substring test [3].
 
 If the data is verifiably IID, the **IID procedure** is used. Otherwise the **non-IID procedure** is used. Most physical sources end up utilizing the latter due to inherent small correlations.
 
 ### 3.3 The IID procedure
 
-For IID data, the **Most Common Value (MCV)** estimate is all that is necessary. Its definition:
+For IID data, the **Most Common Value (MCV)** estimate is all that is necessary. The estimate is calculated as follows:
  Let $\hat p$ be the proportion of the most common value in $L$ samples. A 99% upper confidence bound is
 
 $$p_u = \min\left(1,\ \hat p + 2.576\sqrt{\frac{\hat p(1-\hat p)}{L-1}}\right), \qquad H = -\log_2 p_u.$$
@@ -130,7 +130,7 @@ Estimators can only find patterns they were designed to look for. A source can h
 
 ## 4. Health Tests
 
-Entropy estimation occurs as a single procedure in a controlled environment. To maintain assurance of a noise source's graded entropy, Health tests run **continuously in the deployed device**. Their job is to detect when the noise source has failed or degraded, for example through component aging or subjection to extreme temperatures.
+Entropy estimation occurs as a single procedure in a controlled environment. To check that a noise source continues to meet its estimated entropy level, health tests run **continuously in the deployed device**. Their job is to detect when the noise source has failed or degraded, for example through component aging or exposure to extreme temperatures.
 
 ### 4.1 Types of health tests
 
@@ -148,7 +148,7 @@ The tests are designed around a chosen false positive probability $\alpha$, whic
 
 ### 4.3 Repetition Count Test (RCT)
 
-The RCT is designed to detect a source that gets **stuck** on one value. It counts how many times in a row the same sample has appeared. Given a source has min-entropy $H$ per sample, the probability of any specific value occuring at most $2^{-H}$. So $C$ identical samples in a row happen with probability at most $2^{-H(C-1)}$. Therefore the threshold for triggering an RCT alarm is defined as:
+The RCT is designed to detect a source that gets **stuck** on one value. It counts how many times in a row the same sample has appeared. Given a source has min-entropy $H$ per sample, the probability of any specific value occuring is at most $2^{-H}$. So $C$ identical samples in a row happen with probability at most $2^{-H(C-1)}$. Therefore the threshold for triggering an RCT alarm is defined as:
 
 $$C = 1 + \left\lceil \frac{-\log_2 \alpha}{H} \right\rceil$$
 
@@ -156,7 +156,7 @@ An alarm is raised if a value repeats $C$ or more times in a row. For example, w
 
 ### 4.4 Adaptive Proportion Test (APT)
 
-While the RCT predicts total failure, The APT detects a **large loss of entropy** that does not show up as a stuck output, such as the emergence of a strong bias. The test utilizes a window of size $W$, where $W = 1024$ for binary sources and $W = 512$ for non-binary sources, and counts the occurances of the first sample within that window. The cutoff threshold $C$ is determined as the minimum count that a healthy source would reach with probability at most $\alpha$, taken from the binomial distribution:
+While the RCT detects a source that is stuck on one value, the APT detects a **large loss of entropy** that does not show up as a stuck output, such as the emergence of a strong bias. The test utilizes a window of size $W$, where $W = 1024$ for binary sources and $W = 512$ for non-binary sources, and counts how often the first sample in the window occurs. The cutoff threshold $C$ is determined as the minimum count that a healthy source would reach with probability at most $\alpha$, taken from the binomial distribution:
 
 $$C = 1 + \text{CRITBINOM}(W,\ 2^{-H},\ 1 - \alpha)$$
 
